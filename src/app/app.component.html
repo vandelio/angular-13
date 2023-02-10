@@ -1,0 +1,13 @@
+before
+<dynamic-loader
+  [loadableComponents]="dynamicComponents"
+  [selectedComponent]="selectedComponent"
+></dynamic-loader>
+after
+
+<button
+  *ngFor="let component of dynamicComponents"
+  (click)="chooseComponent(component.data.componentIdentifyer)"
+>
+  {{ component.data.componentIdentifyer }}
+</button>
